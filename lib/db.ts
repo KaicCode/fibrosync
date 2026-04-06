@@ -53,7 +53,7 @@ function createPool(): Pool {
     ssl:
       process.env.NODE_ENV === "production" &&
       !process.env.DATABASE_URL?.includes("localhost")
-        ? { rejectUnauthorized: true }
+        ? { rejectUnauthorized: false }
         : false,
   })
 }
